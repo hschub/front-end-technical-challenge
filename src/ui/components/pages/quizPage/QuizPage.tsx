@@ -8,12 +8,12 @@ import { QuizQuestionPage } from "./questionPage/QuizQuestionPage";
 
 export type QuizPageProps = {
   quizState: QuizState;
+  isResuming: boolean;
 };
 
 export function QuizPage(props: QuizPageProps) {
-  const { state, handleEvent } = useQuizState({
-    quizState: props.quizState,
-  });
+  const { quizState, isResuming } = props;
+  const { state, handleEvent } = useQuizState({ quizState });
 
   // Save the current state
   React.useEffect(() => {
@@ -30,6 +30,7 @@ export function QuizPage(props: QuizPageProps) {
           onStart={() => {
             handleEvent({ kind: "StartQuiz" });
           }}
+          isResuming={isResuming}
         />
       );
     }
