@@ -20,9 +20,7 @@ export function QuizContainer(props: QuizContainerProps) {
       return <ErrorPage message={result.error} />;
     }
     case "Success": {
-      return (
-        <QuizPage quizState={result.quizState} isResuming={result.isResuming} />
-      );
+      return <QuizPage quizState={result.quizState} />;
     }
   }
 }
