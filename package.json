@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "marked": "^18.0.0",
-    "next": "^16.2.3",
+    "next": "^16.2.6",
     "react": "^19.2.5",
     "react-dom": "^19.2.5"
   },
